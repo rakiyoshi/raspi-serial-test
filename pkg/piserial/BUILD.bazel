@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "piserial",
+    srcs = ["piserial.go"],
+    importpath = "github.com/rakiyoshi/raspi-serial-test/pkg/piserial",
+    visibility = ["//visibility:public"],
+    deps = ["@st_bug_go_serial//:go_default_library"],
+)

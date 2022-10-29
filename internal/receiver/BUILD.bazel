@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "receiver",
+    srcs = ["receive.go"],
+    importpath = "github.com/rakiyoshi/raspi-serial-test/internal/receiver",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pkg/piserial",
+        "@st_bug_go_serial//:go_default_library",
+    ],
+)
