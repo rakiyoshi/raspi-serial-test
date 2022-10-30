@@ -7,6 +7,6 @@ go_library(
     visibility = ["//:__subpackages__"],
     deps = [
         "//pkg/piserial",
-        "@st_bug_go_serial//:go_default_library",
+        "@st_bug_go_serial//:serial",
     ],
 )

@@ -1,6 +1,7 @@
 # raspi-serial-test
 This is a test repository for serial communication
 
+
 ## Prerequisite
 
 ### Let UART0 available
@@ -23,10 +24,36 @@ sudo raspi-config
 
 #### Disable bluetooth
 ```bash
-echo dtoverlay=disable-bt | tee -a /boot/config.txt  
+echo dtoverlay=disable-bt | tee -a /boot/config.txt
 ```
 
 #### Reboot
 ```bash
 sudo reboot
 ```
+
+
+## Build
+
+### Resolve dependencies
+
+```bash
+bazelisk run //:gazelle -- update-repos -from_file=go.mod -to_macro=deps.bzl%go_dependencies
+```
+
+### Build
+
+```bash
+bazelisk build //cmd/transmitter
+bazelisk build //cmd/receiver
+```
+
+### Run
+
+```bash
+bazelisk run //cmd/transmitter
+bazelisk run //cmd/receiver
+```
+
+## TODO
+https://github.com/aspect-build/aspect-cli/blob/main/release/release.bzl

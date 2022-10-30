@@ -5,5 +5,5 @@ go_library(
     srcs = ["piserial.go"],
     importpath = "github.com/rakiyoshi/raspi-serial-test/pkg/piserial",
     visibility = ["//visibility:public"],
-    deps = ["@st_bug_go_serial//:go_default_library"],
+    deps = ["@st_bug_go_serial//:serial"],
 )
