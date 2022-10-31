@@ -14,6 +14,6 @@ func main() {
 
 	w := transmitter.NewTransmitter()
 	for input.Scan() {
-		fmt.Fprintf(w, "%s\n", input.Text())
+		fmt.Fprintln(w, input.Text())
 	}
 }
