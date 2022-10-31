@@ -23,8 +23,7 @@ archives:
     replacements:
       arm64: arm64
       arm: arm32
-    name_template: |
-      {{ .Binary }}_{{ .Version }}_{{ .Arm }}
+    name_template: "{{ .Binary }}_{{ .Version }}_{{ .Arm }}"
 checksum:
   name_template: 'checksums.txt'
 changelog:
