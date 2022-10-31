@@ -1,6 +1,7 @@
 # raspi-serial-test
 This is a test repository for serial communication
 
+
 ## Prerequisite
 
 ### Let UART0 available
@@ -8,6 +9,7 @@ This is a test repository for serial communication
 Reference: [Raspberry Pi Documentation \- Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)
 
 #### Disable Serial Console
+
 1. execure the command below
 ```bash
 sudo raspi-config
@@ -22,11 +24,20 @@ sudo raspi-config
 1. Select `<Yes>` for `Would you like the serial port hardware to be enabled?`
 
 #### Disable bluetooth
+
 ```bash
-echo dtoverlay=disable-bt | tee -a /boot/config.txt  
+echo dtoverlay=disable-bt | tee -a /boot/config.txt
 ```
 
 #### Reboot
+
 ```bash
 sudo reboot
+```
+
+
+## Build
+
+```bash
+goreleaser build --snapshot --rm-dist
 ```
