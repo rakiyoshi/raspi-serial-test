@@ -2,7 +2,7 @@ module github.com/rakiyoshi/raspi-serial-test
 
 go 1.19
 
-require go.bug.st/serial v1.4.0
+require go.bug.st/serial v1.5.0
 
 require (
 	github.com/creack/goselect v0.1.2 // indirect
